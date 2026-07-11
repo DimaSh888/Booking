@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <form method="POST" action="{% url 'book-room' %}">
     {% csrf_token %}
         <div>
@@ -15,3 +17,4 @@
         
         <button type="submit">Book this room</button>
 </form>
+{% endblock %}

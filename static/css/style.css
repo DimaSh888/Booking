@@ -1,0 +1,292 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#4f46e5;
+    --primary-hover:#4338ca;
+    --secondary:#f3f4f6;
+    --background:#f8fafc;
+    --white:#ffffff;
+    --text:#1f2937;
+    --text-light:#6b7280;
+    --border:#e5e7eb;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --radius:14px;
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:white;
+    box-shadow: var(--shadow);
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+    padding:20px;
+    margin-bottom:40px;
+}
+
+header a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    padding:12px 24px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+header a:hover{
+    background:var(--primary);
+    color:white;
+}
+
+/* ==========================
+   TITLES
+========================== */
+
+h1{
+    text-align:center;
+    padding:35px 0;
+    font-size:42px;
+    color:var(--primary);
+}
+
+h2{
+    text-align:center;
+    padding:30px;
+    margin-top:auto;
+    color:#666;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+main,
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+    background:white;
+    border-radius:var(--radius);
+    padding:25px;
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button,
+.btn,
+input[type="submit"]{
+
+    background:var(--primary);
+    color:white;
+
+    border:none;
+    padding:12px 24px;
+
+    border-radius:10px;
+    cursor:pointer;
+
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================
+   FORMS
+========================== */
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    max-width:650px;
+    margin:auto;
+}
+
+form p{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:12px;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    font-size:15px;
+    transition:.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(79,70,229,.15);
+
+}
+
+/* ==========================
+   TABLES
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:var(--shadow);
+    border-radius:var(--radius);
+    overflow:hidden;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    border-bottom:1px solid var(--border);
+    text-align:left;
+}
+
+tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================
+   ALERTS
+========================== */
+
+.success{
+    background:#dcfce7;
+    color:#166534;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.error{
+    background:#fee2e2;
+    color:#991b1b;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   LISTS
+========================== */
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:white;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:auto;
+    background:white;
+    box-shadow:0 -2px 15px rgba(0,0,0,.05);
+    text-align:center;
+    padding:25px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    h1{
+        font-size:30px;
+    }
+
+    header{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    form{
+        padding:20px;
+    }
+
+}
+
